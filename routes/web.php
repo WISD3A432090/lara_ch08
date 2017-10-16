@@ -47,3 +47,15 @@ Route::group(['prefix'=>'student'],function() {
 });
 */
 
+Route::get('/','HomeController@indexc');
+
+Route::group(['prefix'=>'student'],function() {
+    Route::get('{student_no}',[
+        'as'=>'student',
+        'uses'=>'StudentController@getStudentData'
+    ]);
+    Route::get('{student_no}/score/{subject?}', [
+        'as'=>'student.score',
+        'uses'=>'StudentController@getStudentScore'
+    ])->where([ 'subject' => '(chinese | english | math)']);
+});

@@ -65,3 +65,6 @@ Route::get('cool','Cool\TestController@indexc');
 Route::group(['namespace'=>'cool'],function(){
     Route::get('cool','TestController@indexc');
 });
+Route::get('/', function () {
+    return view('welcome');
+});

@@ -48,7 +48,7 @@ Route::group(['prefix'=>'student'],function() {
 */
 
 Route::get('/home','HomeController@indexc');
-/*
+
 Route::group(['prefix'=>'student'],function() {
     Route::get('{student_no}',[
         'as'=>'student',
@@ -59,7 +59,7 @@ Route::group(['prefix'=>'student'],function() {
         'uses'=>'StudentController@getStudentScore'
     ])->where([ 'subject' => '(chinese | english | math)']);
 });
-*/
+
 /*
 Route::get('cool','Cool\TestController@indexc');
 
@@ -70,3 +70,4 @@ Route::get('/', function () {
     return view('welcome');
 });*/
 Route::get('/board','BoardController@getIndex');
+

@@ -1,6 +1,6 @@
-<div class="navber navber-default navber-fixed-top">
+<nav class="navber navber-default navber-fixed-top">
     <div class="container">
-    <a class="navber-brand" href="{{ action('HomeController@index')}} ">HelloLaravel</a>
+    <a class="navber-brand" href="{{ action('HomeController@indexc')}} ">HelloLaravel</a>
     <ul class="nav navber-nav">
         <li>
         <a href="{{ action('BoardController@getIndex')  }}">排行榜 </a>

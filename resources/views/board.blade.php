@@ -9,6 +9,7 @@
 	<div class="row">
 		<table class="table table-hover">
 			<thead>
+			<tr>
 			<th>名次</th>
 			<th>學號</th>
 			<th>姓名</th>

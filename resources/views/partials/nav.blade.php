@@ -1,14 +1,11 @@
-<nav class="navber navber-default navber-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-    <a class="navber-brand" href="{{ action('HomeController@indexc')}} ">HelloLaravel</a>
-    <ul class="nav navber-nav">
-        <li>
-        <a href="{{ action('BoardController@getIndex')  }}">排行榜 </a>
-        </li>>
-    </ul>
-</div>
+        <a class="navbar-brand" href="/">HelloLaravel</a>
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="/board">排行榜</a>
+            </li>
+        </ul>
+    </div>
 </nav>
-<div style="padding-top: 70px"></div>
-
-
-
+<div style="padding-top: 70px;"></div>

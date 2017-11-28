@@ -9,33 +9,49 @@
 	<div class="row">
 		<table class="table table-hover">
 			<thead>
-			@foreach($scores as $index => $score)
 			<tr>
-			<th>名次</th>
-			<th>學號</th>
-			<th>姓名</th>
-			<th>國文</th>
-			<th>英文</th>
-			<th>數學</th>
-			<th>總分</th>
-			<th>動作</th>
+				<th>名次</th>
+				<th>學號</th>
+				<th>姓名</th>
+				<th>國文</th>
+				<th>英文</th>
+				<th>數學</th>
+				<th>總分</th>
+				<th>動作</th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr>
-				<td>{{$index}}</td>
-				<td>{{$score->student->no}}</td>
-				<td>{{$score->student->user->name}}</td>
-				<td>{{$score->chinese}}</td>
-				<td>{{$score->english}}</td>
-				<td>{{$score->math}}</td>
-				<td>{{$score->total}}</td>
-				<td>
-					<a class="btn btn-default btn-sm" href=" {route('student',['student_no'=>'s1234567890' ]) }}">查看學生資料</a>
-				</td>
-			</tr>
-			@endforeach
+				@foreach ($scores as $index => $score)
+										<tr>
+										<td class="table-text">
+												<div>{{$index=$index+1}}</div>
+											</td>
+										<td class="table-text">
+												<div>{{ $score->student->no }}</div>
+											</td>
+										<td class="table-text">
+												<div>{{ $score->student->user->name }}</div>
+											</td>
+										<td class="table-text">
+												<div>{{ $score->chinese }}</div>
+											</td>
+										<td class="table-text">
+											<div>{{ $score->english }}</div>
+											</td>
+										<td class="table-text">
+												<div>{{ $score->math }}</div>
+											</td>
+										<td class="table-text">
+												<div>{{ $score->total }}</div>
+											</td>
+										<td>
+												<a class="btn btn-default btn-sm" href="{{route('student',['student_no'=>'s1234567890'])}}">查看學生資料</a>
+											</td>
+										<td>
+										</tr>
+							@endforeach
 			</tbody>
 		</table>
 	</div>
-	@stop
+@stop

@@ -6,8 +6,11 @@ use Illuminate\Http\Request;
 
 class BoardController extends Controller
 {
-    public function getIndex(){     $scores=Score::orderByTotal()
-                                    ->orderBySubject()->get();
-                                    $data=['scores'=>$scores];
-                                    return view('board',$data); }
+    public function getIndex()
+    {
+        $scores = Score::orderByTotal()
+            ->orderBySubject()->get();
+        $data = ['scores' => $scores];
+        return view('board', $data);
+    }
 }

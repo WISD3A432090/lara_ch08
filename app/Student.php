@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use \App\User as UserEloquent;
 use \App\Score as ScoreEloquent;
 
+
 class Student extends Model
 {
     protected $table = 'student';

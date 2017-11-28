@@ -9,6 +9,7 @@
 	<div class="row">
 		<table class="table table-hover">
 			<thead>
+			@foreach($scores as $index => $score)
 			<tr>
 			<th>名次</th>
 			<th>學號</th>
@@ -33,6 +34,7 @@
 					<a class="btn btn-default btn-sm" href=" {route('student',['student_no'=>'s1234567890' ]) }}">查看學生資料</a>
 				</td>
 			</tr>
+			@endforeach
 			</tbody>
 		</table>
 	</div>

@@ -46,6 +46,9 @@ Route::group(['prefix'=>'student'],function() {
     ])->where([ 'subject' => '(chinese | english | math)']);
 });
 */
+Route::get('/',	function()	{
+    return	view('welcome');
+});
 
 Route::get('/home','HomeController@indexc');
 
